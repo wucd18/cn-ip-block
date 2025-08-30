@@ -4,6 +4,11 @@ chmod +x block-ips.sh
 
 ./block-ips.sh
 
+# 添加到crontab
+sudo crontab -e
+
+# 每周一凌晨3点更新
+0 3 * * 1 /usr/local/bin/block-ips.sh update
 演示
 
 1、封禁IP
